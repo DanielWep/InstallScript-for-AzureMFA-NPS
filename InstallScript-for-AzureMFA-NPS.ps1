@@ -15,11 +15,11 @@ $os=(Get-WMIObject win32_operatingsystem).name
 If($install.Success -eq "true") {
     Write-Host("Info: Installation was successful with status code "+ $install.ExitCode +".") -ForegroundColor Green 
     $adiuscliensecret = Read-Host -Prompt 'Please enter your Radius SharedSecret' -AsSecureString
-    $RadiusClientSecret = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($RadiusClientSecret))
+    $radiuscliensecret = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($radiuscliensecret))
         try {
-        $client = New-NpsRadiusClient -Address $RadiusClientIP -Name $RadiusClientName -SharedSecret $RadiusClientSecret
+        $client = New-NpsRadiusClient -Address $radiusclienip -Name $radiusclientname -SharedSecret $radiuscliensecret
 
-        Write-Host("Info: New RadiusClient " + $RadiusClientName + "with IP-Adresse " + $RadiusClientIP + " was added successful.") -ForegroundColor Green 
+        Write-Host("Info: New RadiusClient " + $radiusclientname + "with IP-Adresse " + $radiusclienip + " was added successful.") -ForegroundColor Green 
         $domainregister = netsh nps add registeredserver
             If ($domainregister -eq "Ok.") {
             Write-Host("Info: Server " + $env:computername + " was succesful registered to domain "+ (Get-WmiObject Win32_ComputerSystem).Domain + ".") -ForegroundColor Green 
