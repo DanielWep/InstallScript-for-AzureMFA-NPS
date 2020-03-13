@@ -1,10 +1,10 @@
 # Install Script for Microsoft Network Policy Server (NPS) with AzureMFA Integration
 
 ```
-- Installing the WindowsFeature Network Policy Server (NPS)
-- A Radius Client will be added, e.g. NetScaler Subnet IP
-- Downloading and Installing the AzureMFA NPS Extension
-- Execute the initial AzureMFA config Script
+1. Installing the WindowsFeature Network Policy Server (NPS)
+2. A Radius Client will be added, e.g. NetScaler Subnet IP
+3. Downloading and Installing the AzureMFA NPS Extension
+4. Execute the initial AzureMFA config Script
 ```
 
 ## Getting Started
@@ -37,7 +37,7 @@ InstallScript-for-AzureMFA-NPS -RadiusClientName [YourRadiusClientName] -RadiusC
 ## PostActions
 
 ```
-- Create NPS Policies manually for Connection and Network request
+- NPS policies for connection and network requests must be created manually
 - Check if your new NPS Server added to the ActiveDirectory RAS and IAS Server Group. Otherwise you can authorize the server via NPS console right-click on the server and choose "Register server in Active Directory"
 ```
 
