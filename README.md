@@ -10,18 +10,19 @@
 ## Getting Started
 
 The Install Scripte should be run on the destination NPS Server.
+[More information here.](https://docs.microsoft.com/de-de/azure/active-directory/authentication/howto-mfa-nps-extension)
 
 ### Prerequisites
 
 ```
 - Licenses for Azure Multi-Factor Authentication (included with Azure AD Premium, EMS, or an MFA stand-alone license)
 - Windows Server 2008 R2 SP1 or above.
-- Network connectivity to the following destination with port 80/443 (Webproxy also possible or direct):
-	- https://adnotifications.windowsazure.com
-	- https://login.microsoftonline.com
-	- https://login.microsoftonline.com
-	- https://provisioningapi.microsoftonline.com
-	- https://aadcdn.msauth.net
+- Network connectivity to the following destinations with port 80/443 (Webproxy also possible or direct):
+	https://adnotifications.windowsazure.com
+	https://login.microsoftonline.com
+	https://login.microsoftonline.com
+	https://provisioningapi.microsoftonline.com
+	-https://aadcdn.msauth.net
 - Active Directory domain-joined server
 ```
 
