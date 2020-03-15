@@ -5,6 +5,7 @@
 2. A Radius Client will be added, e.g. NetScaler Subnet IP
 3. Downloading and Installing the AzureMFA NPS Extension
 4. Execute the initial AzureMFA config Script
+5. [Optional] Adding an Windows Firewall Rule for incoming UDP Radius traffic, only for Windows Server 2019.
 ```
 
 ## Getting Started
@@ -25,7 +26,7 @@ The Install Script should be run on the destination NPS Server.
 	https://provisioningapi.microsoftonline.com
 	-https://aadcdn.msauth.net
 - Active Directory domain-joined server
-- Azure AD Tenant ID [(Get it here.)](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties)
+- Azure AD Tenant ID > [Get it here.](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties)
 
 ```
 
