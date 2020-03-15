@@ -24,7 +24,7 @@ The Install Script should be run on the destination NPS Server.
 	https://login.microsoftonline.com
 	https://login.microsoftonline.com
 	https://provisioningapi.microsoftonline.com
-	-https://aadcdn.msauth.net
+	https://aadcdn.msauth.net
 - Active Directory domain-joined server
 - Azure AD Tenant ID
 ```
