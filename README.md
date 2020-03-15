@@ -9,7 +9,8 @@
 
 ## Getting Started
 
-The Install Scripte should be run on the destination NPS Server.
+The Install Script should be run on the destination NPS Server.
+
 [More information here.](https://docs.microsoft.com/de-de/azure/active-directory/authentication/howto-mfa-nps-extension)
 
 ### Prerequisites
@@ -24,6 +25,8 @@ The Install Scripte should be run on the destination NPS Server.
 	https://provisioningapi.microsoftonline.com
 	-https://aadcdn.msauth.net
 - Active Directory domain-joined server
+- Azure AD Tenant ID [(Get it here.)](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties)
+
 ```
 
 ## Running the scripts
