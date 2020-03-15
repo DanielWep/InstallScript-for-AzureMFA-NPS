@@ -27,7 +27,6 @@ The Install Script should be run on the destination NPS Server.
 	-https://aadcdn.msauth.net
 - Active Directory domain-joined server
 - Azure AD Tenant ID
-
 ```
 
 ## Running the scripts
