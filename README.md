@@ -11,11 +11,11 @@ The Install Script run this setup steps automatically:
 
 ## Getting Started
 
-The Install Script should be run on the destination NPS Server.
-
-[More information here.](https://docs.microsoft.com/de-de/azure/active-directory/authentication/howto-mfa-nps-extension)
+The Install Script should run on the target NPS Server and your user needs enough system rights to perfom this script.
 
 ### Prerequisites
+
+This prerequisitesn are provided:
 
 - Licenses for Azure Multi-Factor Authentication (included with Azure AD Premium, EMS, or an MFA stand-alone license)
 - Windows Server 2008 R2 SP1 or above.
@@ -27,6 +27,8 @@ The Install Script should be run on the destination NPS Server.
 	https://aadcdn.msauth.net
 - Active Directory domain-joined server
 - Azure AD Tenant ID
+
+[More information here.](https://docs.microsoft.com/de-de/azure/active-directory/authentication/howto-mfa-nps-extension)
 
 ## Running the scripts
 
@@ -41,4 +43,7 @@ InstallScript-for-AzureMFA-NPS -RadiusClientName [YourRadiusClientName] -RadiusC
 - NPS policies for connection and network requests must be created manually
 - Check if your new NPS Server added to the ActiveDirectory RAS and IAS Server Group. Otherwise you can authorize the server via NPS console right-click on the server and choose "Register server in Active Directory"
 
-#
+# 
+
+Cheers,
+[Daniel Weppeler](https://twitter.com/_danielwep/)
