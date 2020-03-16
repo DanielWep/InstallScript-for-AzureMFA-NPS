@@ -1,7 +1,7 @@
 ﻿param([Parameter(Mandatory=$true)][string]$RadiusClientName="", [Parameter(Mandatory=$true)][string]$RadiusClientIP="")
 
-# Install AzureMFA
-# (c) Daniel Weppeler 15.03.2020 v0.80 
+# Install Script for AzureMFA NPS
+# (c) Daniel Weppeler 15.03.2020 v0.81
 # Twitter: @_DanielWep
 # freeware license.
 
@@ -19,10 +19,10 @@ If($install.Success -eq "true") {
         try {
         $client = New-NpsRadiusClient -Address $RadiusClientIP -Name $RadiusClientName -SharedSecret $RadiusClientSecret
 
-        Write-Host("Info: New RadiusClient " + $RadiusClientName + "with IP-Adresse " + $RadiusClientIP + " was added successful.") -ForegroundColor Green 
+        Write-Host("Info: New RadiusClient " + $RadiusClientName + "with IP-Address " + $RadiusClientIP + " was added successful.") -ForegroundColor Green 
         $domainregister = netsh nps add registeredserver
             If ($domainregister -eq "Ok.") {
-                Write-Host("Info: Server " + $env:computername + " was succesful registered to domain "+ (Get-WmiObject Win32_ComputerSystem).Domain + ".") -ForegroundColor Green 
+                Write-Host("Info: Server " + $env:computername + " was successful registered to domain "+ (Get-WmiObject Win32_ComputerSystem).Domain + ".") -ForegroundColor Green 
                     try {
                         Write-Host("Info: Downloading Extension for Azure MFA") -ForegroundColor Green 
                         Invoke-WebRequest -Uri "https://download.microsoft.com/download/B/F/F/BFFB4F12-9C09-4DBC-A4AF-08E51875EEA9/NpsExtnForAzureMfaInstaller.exe" -OutFile ($env:USERPROFILE + "\Downloads\NpsExtnForAzureMfaInstaller.exe")
