@@ -46,4 +46,4 @@ InstallScript-for-AzureMFA-NPS -RadiusClientName [YourRadiusClientName] -RadiusC
 # 
 
 Cheers,
-[Daniel Weppeler](https://twitter.com/_danielwep/)
+[Daniel Weppeler](https://danielweppeler.de)
